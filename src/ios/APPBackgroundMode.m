@@ -175,6 +175,12 @@ NSString* const kAPPBackgroundEventDeactivate = @"deactivate";
     [session setCategory:AVAudioSessionCategoryPlayback
                    error:NULL];
 
+    // Prevent music from stopping on app startup
+    [session setCategory:AVAudioSessionCategoryAmbient
+
+    error:NULL];
+
+
     // Active the audio session
     [session setActive:YES error:NULL];
 };
